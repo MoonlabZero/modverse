@@ -1,1 +1,2 @@
-# modverse
+# Modverse
+A Minecraft mod repository.
