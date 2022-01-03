@@ -1,2 +1,2 @@
 # Modverse
-A Minecraft mod repository.
+A game mod distribution site.
