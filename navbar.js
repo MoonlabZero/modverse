@@ -37,6 +37,7 @@ function navFunction() {
     //Creates the mod page reference link and puts it in first li
     var navALi1 = document.createElement("a");
     var navALi1T = document.createTextNode("Mods");
+    navALi1.setAttribute("id", "mnt");
     navALi1.setAttribute("href", "mods");
     navALi1.appendChild(navALi1T);
     navLi1.appendChild(navALi1);
@@ -45,6 +46,7 @@ function navFunction() {
     //Creates the about page reference link and puts it in second li
     var navALi2 = document.createElement("a");
     var navALi2T = document.createTextNode("About");
+    navALi2.setAttribute("id", "ant");
     navALi2.setAttribute("href", "about");
     navALi2.appendChild(navALi2T);
     navLi2.appendChild(navALi2);
@@ -53,6 +55,7 @@ function navFunction() {
     //Creates the contact page reference link and puts it in third li
     var navALi3 = document.createElement("a");
     var navALi3T = document.createTextNode("Contact");
+    navALi3.setAttribute("id", "cnt");
     navALi3.setAttribute("href", "contact");
     navALi3.appendChild(navALi3T);
     navLi3.appendChild(navALi3);
@@ -87,4 +90,13 @@ function navFunction() {
     document.head.appendChild(fontM);
     document.head.appendChild(fontPC1);
     document.head.appendChild(fontPC2);
+
+    //Changes nav text to be highlighted when on page
+    if ( document.URL.includes("mods") ) {
+        document.getElementById("mnt").style.color = "hsl(200, 100%, 50%)";
+    } else if ( document.URL.includes("about") ) {
+        document.getElementById("ant").style.color = "hsl(200, 100%, 50%)";
+    } else if ( document.URL.includes("contact") ) {
+        document.getElementById("cnt").style.color = "hsl(200, 100%, 50%)";
+    }
 }
